@@ -5,7 +5,28 @@ use \Luke\Migration\Config\FileCreate;
 use \Luke\Migration\Config\MigrationFile;
 
 
-require_once "vendor/autoload.php";
+if (!ini_get('date.timezone')) {
+    ini_set('date.timezone', 'UTC');
+}
+
+if (isset($GLOBALS['_composer_autoload_path'])) {
+    define('COMPOSER_INSTALL', $GLOBALS['_composer_autoload_path']);
+
+    unset($GLOBALS['_composer_autoload_path']);
+} else {
+    foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+        if (file_exists($file)) {
+            define('COMPOSER_INSTALL', $file);
+
+            break;
+        }
+    }
+
+    unset($file);
+}
+
+
+require COMPOSER_INSTALL;
 
 
 switch ($_SERVER['argv'][1]) {
