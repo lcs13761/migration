@@ -1,5 +1,13 @@
 {
     "name": "lcs13761/migration",
+    "license": "MIT",
+    "type": "library",
+    "keywords":[
+        "migration",
+        "mysql",
+        "database",
+        "db"
+    ],
     "autoload": {
         "psr-4": {
             "Luke\\Migration\\": "src/"
@@ -8,7 +16,6 @@
             "src/Config/Database/Config.php"
         ]
     },
-    "license": "MIT",
     "authors": [
         {
             "name": "lucas silva",
