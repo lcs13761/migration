@@ -40,10 +40,15 @@ switch ($_SERVER['argv'][1]) {
                         'Arquivo Criado com sucesso, na basta database'. PHP_EOL
                     );
                 } catch (Exception $e) {
-                    print($e);
+                    fwrite(STDERR,
+                        $e->getMessage(). PHP_EOL
+                    );
+
                 }
             } else {
-                echo 'nenhum paramentro foi passado';
+                fwrite(STDERR,
+                    'nenhum paramentro foi passado'. PHP_EOL
+                );
             }
 
             break;
@@ -53,8 +58,13 @@ switch ($_SERVER['argv'][1]) {
             $config = new MigrationFile();
             try {
                 $config->actionMigration();
+                fwrite(STDERR,
+                    'Migration realizado com sucesso'. PHP_EOL
+                );
             } catch (Exception $e) {
-                print($e);
+                fwrite(STDERR,
+                    $e->getMessage() . PHP_EOL
+                );
             }
             break;
         }
