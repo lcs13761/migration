@@ -14,10 +14,10 @@ class Connect
         if (empty(self::$instance)) {
             try {
                 self::$instance = new \PDO(
-                    "mysql:host=" . CONF_DB_HOST . ";dbname=" . CONF_DB_NAME,
-                    CONF_DB_USER,
-                    CONF_DB_PASSWD,
-                    CONF_DB_OPTIONS
+                    "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME,
+                    DB_USER,
+                    DB_PASSWD,
+                    DB_OPTIONS
                 );
             } catch (\PDOException $exception) {
                 throw new \PDOException($exception->getMessage(), (int)$exception->getCode());
