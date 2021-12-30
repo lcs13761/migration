@@ -1,5 +1,6 @@
 {
     "name": "lcs13761/migration",
+    "description": "Migration to mysql database",
     "license": "MIT",
     "type": "library",
     "keywords":[
