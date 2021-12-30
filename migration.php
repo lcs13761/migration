@@ -36,6 +36,9 @@ switch ($_SERVER['argv'][1]) {
             if (isset($_SERVER['argv'][2])) {
                 try {
                     $config->createFile($_SERVER['argv'][2]);
+                    fwrite(STDERR,
+                        'Arquivo Criado com sucesso, na basta database'. PHP_EOL
+                    );
                 } catch (Exception $e) {
                     print($e);
                 }
