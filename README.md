@@ -38,10 +38,10 @@ vendor/lcs13761/migration/src/Config/Database/Config.php
 ```
 configuraçao padrao do projeto
 ```bash
-define("CONF_DB_HOST","127.0.0.1");
-define("CONF_DB_USER","root");
-define("CONF_DB_NAME","project");
-define("CONF_DB_PASSWD","root");
+define("DB_HOST","127.0.0.1");
+define("DB_USER","root");
+define("DB_NAME","project");
+define("DB_PASSWD","root");
 ```
 
 to add the migration file (Para adicionar o arquivo de migração)
