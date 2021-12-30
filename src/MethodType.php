@@ -14,9 +14,14 @@ class MethodType implements  IMethodType
         return preg_replace('/\s+/',' ',trim($this->query));
     }
 
-    public function id(): static
+    public function id($type = "int"): static
     {
-        $this->bigint('id')->unsigned()->notNull()->primaryKey();
+        if($type == "int"){
+            $this->integer('id')->unsigned()->notNull()->primaryKey();
+        }else{
+            $this->bigint('id')->unsigned()->notNull()->primaryKey();
+        }
+
         return $this;
     }
 
@@ -162,6 +167,12 @@ class MethodType implements  IMethodType
     public function text(string $name)
     {
         $this->query = "`$name` TEXT";
+        return $this;
+    }
+
+    public function autIncrement()
+    {
+        $this->query .= " AUTO_INCREMENT ";
         return $this;
     }
 }

@@ -22,6 +22,8 @@ interface IMethodType
 
     public function notNull();
 
+    public function autIncrement();
+
     public function unique();
 
     public function default(mixed $value = null);
