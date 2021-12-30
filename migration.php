@@ -14,7 +14,8 @@ if (isset($GLOBALS['_composer_autoload_path'])) {
 
     unset($GLOBALS['_composer_autoload_path']);
 } else {
-    foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+    $array = array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php');
+    foreach ($array as $file) {
         if (file_exists($file)) {
             define('COMPOSER_INSTALL', $file);
 
@@ -37,7 +38,7 @@ switch ($_SERVER['argv'][1]) {
                 try {
                     $config->createFile($_SERVER['argv'][2]);
                     fwrite(STDERR,
-                        'Arquivo Criado com sucesso, na basta database'. PHP_EOL
+                        'File created successfully, in just databasee'. PHP_EOL
                     );
                 } catch (Exception $e) {
                     fwrite(STDERR,
@@ -47,7 +48,7 @@ switch ($_SERVER['argv'][1]) {
                 }
             } else {
                 fwrite(STDERR,
-                    'nenhum paramentro foi passado'. PHP_EOL
+                    'no parameters were passed'. PHP_EOL
                 );
             }
 
@@ -59,7 +60,7 @@ switch ($_SERVER['argv'][1]) {
             try {
                 $config->actionMigration();
                 fwrite(STDERR,
-                    'Migration realizado com sucesso'. PHP_EOL
+                    "Table created successfully " . PHP_EOL
                 );
             } catch (Exception $e) {
                 fwrite(STDERR,
