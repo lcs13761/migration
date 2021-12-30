@@ -112,8 +112,7 @@ Thank you
 ## Credits
 
 - [Lucas S. Santos](https://github.com/lcs13761) (Developer)
-- [All Contributors](https://github.com/lcs13761/uploader/contributors) (This Rock)
+- [All Contributors](https://github.com/lcs13761/migration/contributors) (This Rock)
+₢## License
 
-## License
-
-The MIT License (MIT). Please see [License File](https://github.com/lcs13761/migration-lib/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/lcs13761/migration/blob/master/LICENSE) for more information.
