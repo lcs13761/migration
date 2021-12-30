@@ -1,0 +1,21 @@
+{
+    "name": "lcs13761/migration",
+    "autoload": {
+        "psr-4": {
+            "Luke\\Migration\\": "src/"
+        },
+        "files": [
+            "src/Config/Database/Config.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "lucas silva",
+            "email": "lcs13761@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-pdo": "*"
+    }
+}
