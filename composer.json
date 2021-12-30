@@ -8,6 +8,7 @@
             "src/Config/Database/Config.php"
         ]
     },
+    "license": "MIT",
     "authors": [
         {
             "name": "lucas silva",
