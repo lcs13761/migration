@@ -34,7 +34,7 @@ Before starting it is necessary to configure the database connection data.
 
 The file that needs to be configured is in( O arquivo que precisa ser configurado fica em)
 ```bash
-vendor/migration/src/Config/Database/Config.php 
+vendor/lcs13761/src/Config/Database/Config.php 
 ```
 configuraçao padrao do projeto
 ```bash
@@ -74,7 +74,7 @@ class Test
 Apos a estrutura o arquivo, execute
 
 ```bash
-./vendor/migration/migration.php -m 
+./vendor/lcs13761/migration.php -m 
 ```
 ### Others
 
