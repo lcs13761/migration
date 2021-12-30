@@ -34,7 +34,7 @@ Before starting it is necessary to configure the database connection data.
 
 The file that needs to be configured is in( O arquivo que precisa ser configurado fica em)
 ```bash
-vendor/lcs13761/src/Config/Database/Config.php 
+vendor/lcs13761/migration/src/Config/Database/Config.php 
 ```
 configuraçao padrao do projeto
 ```bash
@@ -46,7 +46,7 @@ define("CONF_DB_PASSWD","root");
 
 to add the migration file (Para adicionar o arquivo de migração)
 ```bash
-./vendor/migration/migration.php -c fileName
+./vendor/lcs13761/migration/migration.php -c fileName
 ```
 #### User endpoint:
 
@@ -74,7 +74,7 @@ class Test
 Apos a estrutura o arquivo, execute
 
 ```bash
-./vendor/lcs13761/migration.php -m 
+./vendor/lcs13761/migration/migration.php -m 
 ```
 ### Others
 
