@@ -99,7 +99,7 @@ Os comandos disponiveis são
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/lcs13761/uploader/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/lcs13761/migration/blob/master/CONTRIBUTING.md) for details.
 
 ## Support
 
