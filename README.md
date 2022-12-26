@@ -17,7 +17,7 @@
 Uploader is available via Composer:
 
 ```bash
-"lcs13761/migration": "^1.0"
+"lcs13761/migration": "^2.0"
 ```
 
 or run
