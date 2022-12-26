@@ -46,7 +46,7 @@ define("DB_PASSWD","root");
 
 to add the migration file (Para adicionar o arquivo de migração)
 ```bash
-php ./vendor/lcs13761/migration/migration.php -c fileName
+php ./vendor/lcs13761/migration/migration.php --migration=fileName
 ```
 #### User endpoint:
 
@@ -72,14 +72,14 @@ class Test
 Apos a estrutura o arquivo, execute
 
 ```bash
-./vendor/lcs13761/migration/migration.php -m 
+./vendor/lcs13761/migration/migration.php --migrate
 ```
 ### Others
 
 Os comandos disponiveis são
 ```bash
  [--migration=] cria o arquivo, para a implementa os dados para a migração. 
- [-migrate] realizar a migraçao dos arquivos para o banco de dados. 
+ [--migrate] realizar a migraçao dos arquivos para o banco de dados. 
 ```
 
 
