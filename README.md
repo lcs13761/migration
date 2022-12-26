@@ -72,7 +72,7 @@ class Test
 Apos a estrutura o arquivo, execute
 
 ```bash
-./vendor/lcs13761/migration/migration.php --migrate
+php ./vendor/lcs13761/migration/migration.php --migrate
 ```
 ### Others
 
