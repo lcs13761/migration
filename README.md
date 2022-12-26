@@ -78,8 +78,8 @@ Apos a estrutura o arquivo, execute
 
 Os comandos disponiveis são
 ```bash
- [-c] [--create] cria o arquivo, para a implementa os dados para a migração. 
- [-m] [--migration] realizar a migraçao dos arquivos para o banco de dados. 
+ [--migration=] cria o arquivo, para a implementa os dados para a migração. 
+ [-migrate] realizar a migraçao dos arquivos para o banco de dados. 
 ```
 
 
