@@ -46,7 +46,7 @@ define("DB_PASSWD","root");
 
 to add the migration file (Para adicionar o arquivo de migração)
 ```bash
-./vendor/lcs13761/migration/migration.php -c fileName
+php ./vendor/lcs13761/migration/migration.php -c fileName
 ```
 #### User endpoint:
 
@@ -54,18 +54,16 @@ to add the migration file (Para adicionar o arquivo de migração)
 <?php
 
 
-use Luke\Migration\MethodType;
-use Luke\Migration\Schema;
+use Luke\Schemas\Schema;
+use Luke\Types\Blueprint;
 
 class Test
 {
   public function up()
   {
-    Schema::create("teste", function (MethodType $table) {
-      return [
-        $table->id()->createRow(),
-        $table->string('name')->unique()->createRow()
-      ];
+    Schema::create("teste", function (Blueprint $table) {
+        $table->id();
+        $table->string('name')->unique();
     });
   }
 }

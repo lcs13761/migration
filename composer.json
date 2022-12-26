@@ -3,7 +3,7 @@
     "description": "Migration to mysql database",
     "license": "MIT",
     "type": "library",
-    "keywords":[
+    "keywords": [
         "migration",
         "mysql",
         "database",
@@ -13,8 +13,12 @@
         "psr-4": {
             "Luke\\Migration\\": "src/"
         },
+        "classmap": [
+            "src/",
+            "database/"
+        ],
         "files": [
-            "src/Config/Database/Config.php"
+            "src/Database/Config.php"
         ]
     },
     "authors": [
@@ -26,5 +30,8 @@
     "require": {
         "php": "^8.0",
         "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }

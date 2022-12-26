@@ -1,9 +1,9 @@
-#!/usr/bin/php -q
+#!/usr/bin/php.exe -q
 <?php
 
-use \Luke\Migration\Config\FileCreate;
-use \Luke\Migration\Config\MigrationFile;
-
+use Luke\Migration\Config\FileCreate;
+use Luke\Migration\Config\MigrationFile;
+use Src\Cli\Cli;
 
 if (!ini_get('date.timezone')) {
     ini_set('date.timezone', 'UTC');
@@ -29,49 +29,49 @@ if (isset($GLOBALS['_composer_autoload_path'])) {
 
 require COMPOSER_INSTALL;
 
+new Cli($argv);
 
-switch ($_SERVER['argv'][1]) {
-    case '-c':
-    case '--create': {
-            $config = new FileCreate();
-            if (isset($_SERVER['argv'][2])) {
-                try {
-                    $config->createFile($_SERVER['argv'][2]);
-                    fwrite(STDERR,
-                        'File created successfully, in just databasee'. PHP_EOL
-                    );
-                } catch (Exception $e) {
-                    fwrite(STDERR,
-                        $e->getMessage(). PHP_EOL
-                    );
 
-                }
-            } else {
-                fwrite(STDERR,
-                    'no parameters were passed'. PHP_EOL
-                );
-            }
+// switch ($_SERVER['argv'][1]) {
+//     case '-c':
+//     case '--create': {
+//             $config = new FileCreate();
+//             if (isset($_SERVER['argv'][2])) {
+//                 try {
+//                     $config->createFile($_SERVER['argv'][2]);
+//                     fwrite(STDERR,
+//                         'File created successfully, in just databasee'. PHP_EOL
+//                     );
+//                 } catch (Exception $e) {
+//                     fwrite(STDERR,
+//                         $e->getMessage(). PHP_EOL
+//                     );
 
-            break;
-        }
-    case '-m':
-    case '--migration': {
-            $config = new MigrationFile();
-            try {
-                $config->actionMigration();
-                fwrite(STDERR,
-                    "Table created successfully " . PHP_EOL
-                );
-            } catch (Exception $e) {
-                fwrite(STDERR,
-                    $e->getMessage() . PHP_EOL
-                );
-            }
-            break;
-        }
-    default:
-        print( "error\n");
-        break;
-}
+//                 }
+//             } else {
+//                 fwrite(STDERR,
+//                     'no parameters were passed'. PHP_EOL
+//                 );
+//             }
 
-?>
+//             break;
+//         }
+//     case '-m':
+//     case '--migration': {
+//             $config = new MigrationFile();
+//             try {
+//                 $config->actionMigration();
+//                 fwrite(STDERR,
+//                     "Table created successfully " . PHP_EOL
+//                 );
+//             } catch (Exception $e) {
+//                 fwrite(STDERR,
+//                     $e->getMessage() . PHP_EOL
+//                 );
+//             }
+//             break;
+//         }
+//     default:
+//         print( "error\n");
+//         break;
+// }
